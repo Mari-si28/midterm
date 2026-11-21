@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khinkali Storm</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game-container">
+
+        <header>
+            <h1>🥟 KHINKALI STORM</h1>
+            <div id="connection-status">Leaderboard: Checking...</div>
+        </header>
+
+        <!-- MAIN MENU -->
+        <section id="menu-screen" class="screen">
+
+            <h2>Welcome to Khinkali Storm!</h2>
+
+            <p>Catch khinkali and avoid spicy peppers!</p>
+
+            <input
+                type="text"
+                id="player-name"
+                placeholder="Enter your name"
+                maxlength="15"
+            >
+
+            <button id="start-button">START GAME</button>
+
+            <p id="personal-record">Personal Record: 0</p>
+
+            <h3>🏆 Leaderboard</h3>
+            <ol id="menu-leaderboard"></ol>
+
+        </section>
+
+        <!-- GAME SCREEN -->
+        <section id="game-screen" class="screen hidden">
+
+            <div class="hud">
+
+                <span>Score: <span id="score">0</span></span>
+
+                <span>Lives: <span id="lives">3</span></span>
+
+                <span>Level: <span id="level">1</span></span>
+
+            </div>
+
+            <canvas id="game-canvas" width="700" height="500"></canvas>
+
+            <p>Use ← → or A / D to move your plate</p>
+
+        </section>
+
+        <!-- GAME OVER SCREEN -->
+        <section id="game-over-screen" class="screen hidden">
+
+            <h2>GAME OVER!</h2>
+
+            <p>Your Score: <span id="final-score">0</span></p>
+
+            <button id="restart-button">PLAY AGAIN</button>
+
+            <h3>🏆 Leaderboard</h3>
+            <ol id="game-leaderboard"></ol>
+
+        </section>
+
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+
+</body>
+</html>
