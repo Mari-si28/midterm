@@ -5,4 +5,6 @@ COPY index.html style.css /usr/share/nginx/html/
 
 COPY js/ /usr/share/nginx/html/js/
 
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
 EXPOSE 80

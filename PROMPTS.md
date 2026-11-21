@@ -1,20 +1,14 @@
 
-# AI Prompts Used
+## Prompt 4 - Leaderboard API
 
-## Prompt 1 - Game Structure
+Create a Node.js and Express leaderboard microservice.
 
-Create a browser game called Khinkali Storm using HTML, CSS and Vanilla JavaScript.
+Implement GET /api/health, GET /api/scores and POST /api/scores.
 
-Use separate JavaScript modules for the player, falling objects, game logic and user interface.
+Validate player names and scores. Store results in /data/scores.json.
 
-## Prompt 2 - Game Mechanics
+## Prompt 5 - Docker Integration
 
-Create a game where the player catches falling khinkali and avoids spicy peppers.
+Connect the game container and leaderboard container using Docker Compose.
 
-Add scoring, three lives, increasing difficulty, keyboard controls and localStorage personal records.
-
-## Prompt 3 - Game Interface
-
-Create three screens: a main menu, a game screen and a Game Over screen.
-
-Use a canvas for the game and add a simple attractive design.
+Use an Nginx reverse proxy for /api requests and a persistent Docker volume for scores.

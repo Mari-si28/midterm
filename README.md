@@ -19,16 +19,42 @@ The player controls a plate and catches falling khinkali while avoiding spicy pe
 
 - HTML
 - CSS
-- JavaScript
+- Vanilla JavaScript
+- Node.js
+- Express
 - Docker
+- Docker Compose
 - Nginx
 
-## How to Run
+## Project Structure
 
-Open the project terminal and run:
+- game/ - Browser game
+- leaderboard/ - Leaderboard microservice
+- docker-compose.yml - Container configuration
 
-docker build -t khinkali-game ./game
+## Run the Project
 
-docker run -d --name khinkali-game -p 8080:80 khinkali-game
+Run:
 
-Open http://localhost:8080 in your browser.
+docker compose up -d --build
+
+Open:
+
+http://localhost:8080
+
+## API Endpoints
+
+GET /api/health
+
+GET /api/scores
+
+POST /api/scores
+
+## Docker Containers
+
+- khinkali-game
+- khinkali-leaderboard
+
+Both containers communicate through khinkali-net.
+
+Leaderboard results are stored in the leaderboard-data volume.
